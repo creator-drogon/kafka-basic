@@ -1,0 +1,12 @@
+com\kafka\consumer\domain\Book$BookBuilder.class
+com\kafka\consumer\config\ConsumerConfiguration.class
+com\kafka\consumer\domain\EventType.class
+com\kafka\consumer\config\ConsumerApp.class
+com\kafka\consumer\domain\LibraryEvents.class
+com\kafka\consumer\service\EventService.class
+com\kafka\consumer\domain\Book.class
+com\kafka\consumer\domain\LibraryEvents$LibraryEventsBuilder.class
+com\kafka\consumer\service\EventService$1.class
+com\kafka\consumer\ConsumerApplication.class
+com\kafka\consumer\config\ConsumerAppManualAck.class
+com\kafka\consumer\repository\EventRepository.class
