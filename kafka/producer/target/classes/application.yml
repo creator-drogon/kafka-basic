@@ -1,0 +1,31 @@
+server:
+  port: 8088
+
+spring:
+  profiles:
+    - local
+  kafka:
+    template:
+      default-topic: library-event
+    producer:
+      bootstrap-servers: localhost:9092,localhost:9093
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer #key is library event id i.e Integer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer #value is payload so String
+      acks: all
+      retries: 20
+    admin:
+      properties:
+        bootstrap.servers: localhost:9092,localhost:9093
+       # A list of host/port pairs to use for establishing the initial connection to the Kafka cluster.
+        #The client will make use of all servers irrespective of which servers are specified
+        #here for bootstrapping—this list only impacts the initial hosts used to discover the full set of servers.
+--- # use 3 dash to indicate new configuration within same yml
+
+spring:
+  profiles:
+    - dev
+  kafka:
+    producer:
+      bootstrap-servers: dev:9092,dev:9093
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+      value-serāializer: org.apache.kafka.common.serialization.StringSerializer
